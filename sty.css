@@ -1,0 +1,35 @@
+h1{
+    font-family: 'righteous', sans-serif;
+    font-size: 36px;
+    width: max-content;
+    text-transform: uppercase;
+    color: rgb(102, 51, 153);
+    border-bottom: 4px solid  rgb(102, 51, 153);
+    width: 50%;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+p{
+    font-family: 'dejavusans', sans-serif;
+    font-size: 12px;
+    line-height: 1.2;
+    color: rgb(49, 49, 49);
+    width: 45%;
+}
+
+p a{
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgb(189, 158, 209);
+}
+
+.cap{
+    text-transform: uppercase;
+}

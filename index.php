@@ -22,8 +22,10 @@ $mpdf = new \Mpdf\Mpdf([
     'mode' => 's' // inclut subset des fonts utlisées
 ]);
 
-$mpdf->WriteHTML("h1{font-family: righteous; color:rgb(255,0,0); border-bottom: 4px solid rgb(255,0,0);}", \Mpdf\HTMLParserMode::HEADER_CSS);
-$mpdf->WriteHTML('<h1>Hello world (Arch Arch Arch) !</h1>', \Mpdf\HTMLParserMode::HTML_BODY);
+$stylesheet = file_get_contents('sty.css');
+$html = file_get_contents('extrait.html');
+$mpdf->WriteHTML($stylesheet, \Mpdf\HTMLParserMode::HEADER_CSS);
+$mpdf->WriteHTML($html, \Mpdf\HTMLParserMode::HTML_BODY);
 
 // nom du PDF, "D" pour download
 $mpdf->Output("exemple-01.pdf", "D");
